@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Full height */
+html, body, #root {
+  height: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode (default) - Modern & Clean */
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8eef7 100%);
+  color: #1e293b;
+}
+
+/* Dark mode - Rich & Professional */
+.dark body {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #f1f5f9;
+}
+
+/* Light mode specific */
+.light body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8eef7 100%);
+  color: #1e293b;
+}
+
+/* Global light-mode readability boost across all pages/sections */
+html:not(.dark) {
+  color-scheme: light;
+}
+
+html:not(.dark) body {
+  color: #0f172a;
+}
+
+html:not(.dark) .text-slate-500,
+html:not(.dark) .text-slate-400,
+html:not(.dark) .text-slate-300,
+html:not(.dark) .text-gray-600,
+html:not(.dark) .text-gray-500,
+html:not(.dark) .text-gray-400 {
+  color: #334155 !important;
+  font-weight: 500;
+}
+
+html:not(.dark) input,
+html:not(.dark) textarea,
+html:not(.dark) select {
+  color: #0f172a;
+}
+
+html:not(.dark) select option {
+  color: #0f172a;
+  background-color: #ffffff;
+}
+
+html.dark select option {
+  color: #0f172a;
+  background-color: #ffffff;
+}
+
+.admin-dashboard.admin-theme-dark {
+  color: #f8fafc;
+}
+
+.admin-dashboard.admin-theme-dark .text-slate-500,
+.admin-dashboard.admin-theme-dark .text-slate-400,
+.admin-dashboard.admin-theme-dark .text-slate-300,
+.admin-dashboard.admin-theme-dark .dark\:text-slate-500,
+.admin-dashboard.admin-theme-dark .dark\:text-slate-400,
+.admin-dashboard.admin-theme-dark .dark\:text-slate-300 {
+  color: #cbd5e1 !important;
+}
+
+.admin-dashboard.admin-theme-dark .admin-alert-field {
+  color: #f8fafc !important;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.admin-dashboard.admin-theme-dark .admin-alert-field::placeholder {
+  color: #cbd5e1 !important;
+  opacity: 1;
+}
+
+.admin-dashboard.admin-theme-light {
+  color: #0f172a;
+}
+
+.admin-dashboard.admin-theme-light .text-slate-500,
+.admin-dashboard.admin-theme-light .text-slate-400,
+.admin-dashboard.admin-theme-light .text-slate-300,
+.admin-dashboard.admin-theme-light .dark\:text-slate-500,
+.admin-dashboard.admin-theme-light .dark\:text-slate-400,
+.admin-dashboard.admin-theme-light .dark\:text-slate-300 {
+  color: #334155 !important;
+}
+
+.admin-dashboard.admin-theme-light .text-white {
+  color: #0f172a !important;
+}
+
+.admin-dashboard.admin-theme-light button.text-white {
+  color: #ffffff !important;
+}
+
+.admin-dashboard.admin-theme-light :is(input, textarea, select) {
+  color: #0f172a !important;
+}
+
+.admin-dashboard.admin-theme-light :is(input, textarea)::placeholder {
+  color: #64748b !important;
+  opacity: 1;
+}
+
+.admin-dashboard.admin-theme-light .admin-alert-field {
+  color: #0f172a !important;
+  border-color: rgba(15, 23, 42, 0.2);
+}
+
+.admin-dashboard.admin-theme-light .admin-alert-field::placeholder {
+  color: #475569 !important;
+  opacity: 1;
+}
+
+html.dark .hr-dashboard .text-slate-500,
+html.dark .hr-dashboard .dark\:text-slate-500 {
+  color: #a6b4c8 !important;
+}
+
+html.dark .hr-dashboard .text-slate-400,
+html.dark .hr-dashboard .dark\:text-slate-400 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .hr-dashboard .text-slate-300,
+html.dark .hr-dashboard .dark\:text-slate-300 {
+  color: #e2e8f0 !important;
+}
+
+html.dark .hr-dashboard .dark\:text-gray-500,
+html.dark .hr-dashboard .dark\:text-gray-600,
+html.dark .hr-dashboard .dark\:text-gray-400 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .hr-dashboard input::placeholder,
+html.dark .hr-dashboard textarea::placeholder {
+  color: #cbd5e1 !important;
+  opacity: 1;
+}
+
+html:not(.dark) .hr-dashboard .text-gray-600,
+html:not(.dark) .hr-dashboard .text-gray-500,
+html:not(.dark) .hr-dashboard .text-slate-500,
+html:not(.dark) .hr-dashboard .text-slate-400,
+html:not(.dark) .hr-dashboard .dark\:text-slate-400,
+html:not(.dark) .hr-dashboard .dark\:text-slate-300 {
+  color: #334155 !important;
+}
+
+html:not(.dark) .hr-dashboard input,
+html:not(.dark) .hr-dashboard textarea,
+html:not(.dark) .hr-dashboard select {
+  color: #0f172a !important;
+}
+
+html:not(.dark) .hr-dashboard input::placeholder,
+html:not(.dark) .hr-dashboard textarea::placeholder {
+  color: #64748b !important;
+  opacity: 1;
+}
+
+html:not(.dark) input::placeholder,
+html:not(.dark) textarea::placeholder {
+  color: #64748b;
+  opacity: 1;
+}
+
+/* Glass card with modern styling */
+.glass-card {
+  @apply bg-white/90 dark:bg-slate-800/90;
+  backdrop-filter: blur(20px);
+  border-radius: 1.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.dark .glass-card {
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Inputs with improved styling */
+.input-field {
+  @apply w-full px-4 py-3 
+         bg-white dark:bg-slate-800
+         border-2 border-slate-200 dark:border-slate-700
+         text-slate-800 dark:text-slate-100
+         placeholder-slate-400 dark:placeholder-slate-500 
+         rounded-xl
+         focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+         transition-all duration-200;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply bg-gradient-to-r from-indigo-600 to-purple-600
+         py-3 rounded-xl font-semibold text-white hover:opacity-90;
+}
