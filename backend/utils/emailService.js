@@ -134,7 +134,7 @@ export const emailTemplates = {
           </div>
           
           <div style="text-align: center; margin-top: 30px;">
-            <a href="https://gen-ai-placement-management-system.vercel.app/login"
+            <a href="http://localhost:5173/login"
                style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); 
                       color: white; 
                       padding: 15px 40px; 
